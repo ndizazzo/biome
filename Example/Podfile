@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Biome_Example' do
+  pod 'Biome', :path => '../'
+
+  target 'Biome_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
