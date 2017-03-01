@@ -1,0 +1,14 @@
+//
+//  Biome.xcconfig
+//  Biome
+//
+//  Copyright 2017 Nick DiZazzo
+//  Simple environment management for iOS / tvOS / watchOS / macOS
+//
+//  https://github.com/ndizazzo/Biome
+//
+
+FRAMEWORK_SEARCH_PATHS[sdk=macosx*] = $(SRCROOT)/Carthage/Build/Mac/ $(inherited)
+FRAMEWORK_SEARCH_PATHS[sdk=iphone*] = $(SRCROOT)/Carthage/Build/iOS/ $(inherited)
+FRAMEWORK_SEARCH_PATHS[sdk=watch*] = $(SRCROOT)/Carthage/Build/watchOS/ $(inherited)
+FRAMEWORK_SEARCH_PATHS[sdk=appletv*] = $(SRCROOT)/Carthage/Build/tvOS/ $(inherited)

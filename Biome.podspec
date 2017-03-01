@@ -1,42 +1,18 @@
-#
-# Be sure to run `pod lib lint Biome.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'Biome'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of Biome.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.version          = '1.0.0'
+  s.summary          = 'Simple environment management for iOS / macOS / tvOS / watchOS!'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Biome is a simple way to manage sets of variables between environments you might need to work with when developing your application.
+
+One problem developers face, is the need to create multiple builds in order to test how their application functions in different environments. Biome aims to reduce the amount of re-building that needs to occur, by providing a mechanism to switch configurations during run-time.
                        DESC
 
   s.homepage         = 'https://github.com/ndizazzo/Biome'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'ndizazzo' => 'nick@twg.io' }
+  s.author           = { 'ndizazzo' => 'nick.dizazzo@gmail.com' }
   s.source           = { :git => 'https://github.com/ndizazzo/Biome.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
   s.source_files = 'Biome/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'Biome' => ['Biome/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
