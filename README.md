@@ -4,9 +4,9 @@
 [![Version](https://img.shields.io/cocoapods/v/Biome.svg?style=flat)](http://cocoapods.org/pods/Biome)
 [![Downloads](https://img.shields.io/github/downloads/biome/biome/total.svg)](http://cocoapods.org/pods/Biome)
 ![Supported Platforms](https://img.shields.io/cocoapods/p/Biome.svg)
-[![CI Status](http://img.shields.io/travis/ndizazzo/Biome.svg?style=flat)](https://travis-ci.org/ndizazzo/Biome)
 [![License](https://img.shields.io/cocoapods/l/Biome.svg?style=flat)](http://cocoapods.org/pods/Biome)
 [![Platform](https://img.shields.io/cocoapods/p/Biome.svg?style=flat)](http://cocoapods.org/pods/Biome)
+[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=58befdc41bb76b0100b9579f&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/58befdc41bb76b0100b9579f/build/latest?branch=master)
 
 ## What is Biome?
 
