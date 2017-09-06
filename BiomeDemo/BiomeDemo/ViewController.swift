@@ -20,9 +20,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.showBiomesButton?.layer.cornerRadius = 3.0
-        
+
         let currentBiome = BiomeManager.shared.current
-        self.apiURLLabel?.text = currentBiome?.get("api_url") as? String
+
+        self.setupBiomeInfo(biome: currentBiome)
     }
     
     @IBAction func showBiomes(_ sender: Any) {
@@ -37,11 +38,15 @@ class ViewController: UIViewController {
         
         self.navigationController?.pushViewController(tableViewController, animated: true)
     }
+
+    func setupBiomeInfo(biome: Biome?) {
+        self.apiURLLabel?.text = biome?.get("api_url") as? String
+    }
 }
 
 extension ViewController: BiomeManagerDelegate {
     func switched(to biome: Biome?) {
-        self.apiURLLabel?.text = biome?.get("api_url") as? String
+        self.setupBiomeInfo(biome: biome)
     }
 }
 
