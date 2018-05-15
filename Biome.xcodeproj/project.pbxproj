@@ -7,45 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C5EE7B1E1E6DE98200EC5A49 /* Biome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EE7B141E6DE98200EC5A49 /* Biome.framework */; };
+		C5340FCC20C7963C0045BA5B /* Biome.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EE7B2F1E6DEA4100EC5A49 /* Biome.swift */; };
+		C534207620C8DF180081B6E5 /* HashableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C534207520C8DF180081B6E5 /* HashableType.swift */; };
+		C534EB0F20D30FDE006414ED /* BiomeGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C534EB0E20D30FDE006414ED /* BiomeGroupTests.swift */; };
+		C534EB1120D42093006414ED /* HashableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C534EB1020D42093006414ED /* HashableTests.swift */; };
+		C570F7F720D2C43800890450 /* SelectableArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A9BE720D1C6FB00C150E9 /* SelectableArrayTests.swift */; };
+		C570F7F820D2C44D00890450 /* testProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5EE7B391E6DEAA100EC5A49 /* testProperties.plist */; };
+		C570F7F920D2C44D00890450 /* testProperties.json in Resources */ = {isa = PBXBuildFile; fileRef = C59A9BE920D2B50800C150E9 /* testProperties.json */; };
+		C570F7FB20D2CDC700890450 /* BiomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C570F7FA20D2CDC700890450 /* BiomeTests.swift */; };
+		C58861F920DAC6870074D71E /* BiomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EE7B301E6DEA4100EC5A49 /* BiomeDataSource.swift */; };
+		C59A9BE220D19B4900C150E9 /* BiomeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A9BE120D19B4900C150E9 /* BiomeGroup.swift */; };
+		C59A9BE420D19B7500C150E9 /* BiomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A9BE320D19B7500C150E9 /* BiomeManager.swift */; };
+		C59A9BE620D19C1F00C150E9 /* SelectableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A9BE520D19C1F00C150E9 /* SelectableArray.swift */; };
+		C5E5F8E720D44832005F8FB7 /* BiomeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EE7B361E6DEAA100EC5A49 /* BiomeManagerTests.swift */; };
 		C5EE7B251E6DE98200EC5A49 /* Biome.h in Headers */ = {isa = PBXBuildFile; fileRef = C5EE7B171E6DE98200EC5A49 /* Biome.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C5EE7B321E6DEA4100EC5A49 /* Biome.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EE7B2F1E6DEA4100EC5A49 /* Biome.swift */; };
-		C5EE7B331E6DEA4100EC5A49 /* BiomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EE7B301E6DEA4100EC5A49 /* BiomeDataSource.swift */; };
-		C5EE7B341E6DEA4100EC5A49 /* PlistBiomeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EE7B311E6DEA4100EC5A49 /* PlistBiomeProvider.swift */; };
-		C5EE7B3A1E6DEAA100EC5A49 /* BiomeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EE7B361E6DEAA100EC5A49 /* BiomeManagerTests.swift */; };
-		C5EE7B3B1E6DEAA100EC5A49 /* BiomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EE7B371E6DEAA100EC5A49 /* BiomeTests.swift */; };
-		C5EE7B3C1E6DEAA100EC5A49 /* PlistBiomeProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EE7B381E6DEAA100EC5A49 /* PlistBiomeProviderTests.swift */; };
-		C5EE7B3D1E6DEAA100EC5A49 /* testProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5EE7B391E6DEAA100EC5A49 /* testProperties.plist */; };
-		C5EE7B611E6DFD3500EC5A49 /* Carthage.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C5EE7B601E6DFD3500EC5A49 /* Carthage.xcconfig */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C5EE7B1F1E6DE98200EC5A49 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C5EE7B0B1E6DE98200EC5A49 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C5EE7B131E6DE98200EC5A49;
-			remoteInfo = Biome;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		C534207520C8DF180081B6E5 /* HashableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashableType.swift; sourceTree = "<group>"; };
+		C534EB0E20D30FDE006414ED /* BiomeGroupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiomeGroupTests.swift; sourceTree = "<group>"; };
+		C534EB1020D42093006414ED /* HashableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashableTests.swift; sourceTree = "<group>"; };
+		C570F7FA20D2CDC700890450 /* BiomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiomeTests.swift; sourceTree = "<group>"; };
+		C59A9BE120D19B4900C150E9 /* BiomeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BiomeGroup.swift; path = Classes/BiomeGroup.swift; sourceTree = "<group>"; };
+		C59A9BE320D19B7500C150E9 /* BiomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BiomeManager.swift; path = Classes/BiomeManager.swift; sourceTree = "<group>"; };
+		C59A9BE520D19C1F00C150E9 /* SelectableArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectableArray.swift; path = Classes/SelectableArray.swift; sourceTree = "<group>"; };
+		C59A9BE720D1C6FB00C150E9 /* SelectableArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableArrayTests.swift; sourceTree = "<group>"; };
+		C59A9BE920D2B50800C150E9 /* testProperties.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testProperties.json; sourceTree = "<group>"; };
+		C59A9BEF20D2B9E600C150E9 /* BiomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BiomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C59A9BF320D2B9E600C150E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5EE7B141E6DE98200EC5A49 /* Biome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Biome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5EE7B171E6DE98200EC5A49 /* Biome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Biome.h; sourceTree = "<group>"; };
 		C5EE7B181E6DE98200EC5A49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C5EE7B1D1E6DE98200EC5A49 /* BiomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BiomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5EE7B241E6DE98200EC5A49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5EE7B2F1E6DEA4100EC5A49 /* Biome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Biome.swift; path = Classes/Biome.swift; sourceTree = "<group>"; };
 		C5EE7B301E6DEA4100EC5A49 /* BiomeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BiomeDataSource.swift; path = Classes/BiomeDataSource.swift; sourceTree = "<group>"; };
-		C5EE7B311E6DEA4100EC5A49 /* PlistBiomeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlistBiomeProvider.swift; path = Classes/PlistBiomeProvider.swift; sourceTree = "<group>"; };
 		C5EE7B361E6DEAA100EC5A49 /* BiomeManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiomeManagerTests.swift; sourceTree = "<group>"; };
-		C5EE7B371E6DEAA100EC5A49 /* BiomeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiomeTests.swift; sourceTree = "<group>"; };
-		C5EE7B381E6DEAA100EC5A49 /* PlistBiomeProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistBiomeProviderTests.swift; sourceTree = "<group>"; };
 		C5EE7B391E6DEAA100EC5A49 /* testProperties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = testProperties.plist; sourceTree = "<group>"; };
 		C5EE7B601E6DFD3500EC5A49 /* Carthage.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Carthage.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C59A9BEC20D2B9E600C150E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5EE7B101E6DE98200EC5A49 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,23 +60,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C5EE7B1A1E6DE98200EC5A49 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C5EE7B1E1E6DE98200EC5A49 /* Biome.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C59A9BF020D2B9E600C150E9 /* BiomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C570F7FA20D2CDC700890450 /* BiomeTests.swift */,
+				C534EB0E20D30FDE006414ED /* BiomeGroupTests.swift */,
+				C5EE7B361E6DEAA100EC5A49 /* BiomeManagerTests.swift */,
+				C59A9BE720D1C6FB00C150E9 /* SelectableArrayTests.swift */,
+				C5EE7B391E6DEAA100EC5A49 /* testProperties.plist */,
+				C59A9BE920D2B50800C150E9 /* testProperties.json */,
+				C59A9BF320D2B9E600C150E9 /* Info.plist */,
+				C534EB1020D42093006414ED /* HashableTests.swift */,
+			);
+			path = BiomeTests;
+			sourceTree = "<group>";
+		};
 		C5EE7B0A1E6DE98200EC5A49 = {
 			isa = PBXGroup;
 			children = (
 				C5EE7B601E6DFD3500EC5A49 /* Carthage.xcconfig */,
 				C5EE7B161E6DE98200EC5A49 /* Biome */,
-				C5EE7B211E6DE98200EC5A49 /* BiomeTests */,
+				C59A9BF020D2B9E600C150E9 /* BiomeTests */,
 				C5EE7B151E6DE98200EC5A49 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				C5EE7B141E6DE98200EC5A49 /* Biome.framework */,
-				C5EE7B1D1E6DE98200EC5A49 /* BiomeTests.xctest */,
+				C59A9BEF20D2B9E600C150E9 /* BiomeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,32 +107,15 @@
 			path = Biome;
 			sourceTree = "<group>";
 		};
-		C5EE7B211E6DE98200EC5A49 /* BiomeTests */ = {
-			isa = PBXGroup;
-			children = (
-				C5EE7B351E6DEA4B00EC5A49 /* Biome */,
-				C5EE7B241E6DE98200EC5A49 /* Info.plist */,
-			);
-			path = BiomeTests;
-			sourceTree = "<group>";
-		};
 		C5EE7B2E1E6DE9DA00EC5A49 /* Biome */ = {
 			isa = PBXGroup;
 			children = (
 				C5EE7B2F1E6DEA4100EC5A49 /* Biome.swift */,
+				C59A9BE120D19B4900C150E9 /* BiomeGroup.swift */,
+				C59A9BE320D19B7500C150E9 /* BiomeManager.swift */,
 				C5EE7B301E6DEA4100EC5A49 /* BiomeDataSource.swift */,
-				C5EE7B311E6DEA4100EC5A49 /* PlistBiomeProvider.swift */,
-			);
-			name = Biome;
-			sourceTree = "<group>";
-		};
-		C5EE7B351E6DEA4B00EC5A49 /* Biome */ = {
-			isa = PBXGroup;
-			children = (
-				C5EE7B361E6DEAA100EC5A49 /* BiomeManagerTests.swift */,
-				C5EE7B371E6DEAA100EC5A49 /* BiomeTests.swift */,
-				C5EE7B381E6DEAA100EC5A49 /* PlistBiomeProviderTests.swift */,
-				C5EE7B391E6DEAA100EC5A49 /* testProperties.plist */,
+				C534207520C8DF180081B6E5 /* HashableType.swift */,
+				C59A9BE520D19C1F00C150E9 /* SelectableArray.swift */,
 			);
 			name = Biome;
 			sourceTree = "<group>";
@@ -137,6 +134,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		C59A9BEE20D2B9E600C150E9 /* BiomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C59A9BF420D2B9E600C150E9 /* Build configuration list for PBXNativeTarget "BiomeTests" */;
+			buildPhases = (
+				C59A9BEB20D2B9E600C150E9 /* Sources */,
+				C59A9BEC20D2B9E600C150E9 /* Frameworks */,
+				C59A9BED20D2B9E600C150E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BiomeTests;
+			productName = BiomeTest;
+			productReference = C59A9BEF20D2B9E600C150E9 /* BiomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C5EE7B131E6DE98200EC5A49 /* Biome */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5EE7B281E6DE98200EC5A49 /* Build configuration list for PBXNativeTarget "Biome" */;
@@ -155,42 +169,26 @@
 			productReference = C5EE7B141E6DE98200EC5A49 /* Biome.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C5EE7B1C1E6DE98200EC5A49 /* BiomeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C5EE7B2B1E6DE98200EC5A49 /* Build configuration list for PBXNativeTarget "BiomeTests" */;
-			buildPhases = (
-				C5EE7B191E6DE98200EC5A49 /* Sources */,
-				C5EE7B1A1E6DE98200EC5A49 /* Frameworks */,
-				C5EE7B1B1E6DE98200EC5A49 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C5EE7B201E6DE98200EC5A49 /* PBXTargetDependency */,
-			);
-			name = BiomeTests;
-			productName = BiomeTests;
-			productReference = C5EE7B1D1E6DE98200EC5A49 /* BiomeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		C5EE7B0B1E6DE98200EC5A49 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				DefaultBuildSystemTypeForWorkspace = Latest;
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Nick DiZazzo";
 				TargetAttributes = {
+					C59A9BEE20D2B9E600C150E9 = {
+						CreatedOnToolsVersion = 10.0;
+						DevelopmentTeam = KAQ9WEF9C7;
+						ProvisioningStyle = Automatic;
+					};
 					C5EE7B131E6DE98200EC5A49 = {
 						CreatedOnToolsVersion = 8.2.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
-					};
-					C5EE7B1C1E6DE98200EC5A49 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -207,62 +205,114 @@
 			projectRoot = "";
 			targets = (
 				C5EE7B131E6DE98200EC5A49 /* Biome */,
-				C5EE7B1C1E6DE98200EC5A49 /* BiomeTests */,
+				C59A9BEE20D2B9E600C150E9 /* BiomeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C59A9BED20D2B9E600C150E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C570F7F920D2C44D00890450 /* testProperties.json in Resources */,
+				C570F7F820D2C44D00890450 /* testProperties.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5EE7B121E6DE98200EC5A49 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5EE7B611E6DFD3500EC5A49 /* Carthage.xcconfig in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C5EE7B1B1E6DE98200EC5A49 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C5EE7B3D1E6DEAA100EC5A49 /* testProperties.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C59A9BEB20D2B9E600C150E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C570F7FB20D2CDC700890450 /* BiomeTests.swift in Sources */,
+				C534EB1120D42093006414ED /* HashableTests.swift in Sources */,
+				C5E5F8E720D44832005F8FB7 /* BiomeManagerTests.swift in Sources */,
+				C570F7F720D2C43800890450 /* SelectableArrayTests.swift in Sources */,
+				C534EB0F20D30FDE006414ED /* BiomeGroupTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5EE7B0F1E6DE98200EC5A49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5EE7B341E6DEA4100EC5A49 /* PlistBiomeProvider.swift in Sources */,
-				C5EE7B321E6DEA4100EC5A49 /* Biome.swift in Sources */,
-				C5EE7B331E6DEA4100EC5A49 /* BiomeDataSource.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C5EE7B191E6DE98200EC5A49 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C5EE7B3B1E6DEAA100EC5A49 /* BiomeTests.swift in Sources */,
-				C5EE7B3A1E6DEAA100EC5A49 /* BiomeManagerTests.swift in Sources */,
-				C5EE7B3C1E6DEAA100EC5A49 /* PlistBiomeProviderTests.swift in Sources */,
+				C59A9BE220D19B4900C150E9 /* BiomeGroup.swift in Sources */,
+				C59A9BE620D19C1F00C150E9 /* SelectableArray.swift in Sources */,
+				C59A9BE420D19B7500C150E9 /* BiomeManager.swift in Sources */,
+				C5340FCC20C7963C0045BA5B /* Biome.swift in Sources */,
+				C534207620C8DF180081B6E5 /* HashableType.swift in Sources */,
+				C58861F920DAC6870074D71E /* BiomeDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		C5EE7B201E6DE98200EC5A49 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C5EE7B131E6DE98200EC5A49 /* Biome */;
-			targetProxy = C5EE7B1F1E6DE98200EC5A49 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
+		C59A9BF520D2B9E600C150E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KAQ9WEF9C7;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = BiomeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks\n@executable_path/Frameworks\n@loader_path/../Frameworks\n@executable_path/../Frameworks @loader_path/../Frameworks @executable_path/../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_BUNDLE_IDENTIFIER = org.ndizazzo.BiomeTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		C59A9BF620D2B9E600C150E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KAQ9WEF9C7;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = BiomeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks\n@executable_path/Frameworks\n@loader_path/../Frameworks\n@executable_path/../Frameworks @loader_path/../Frameworks @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ndizazzo.BiomeTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
 		C5EE7B261E6DE98200EC5A49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -272,15 +322,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -312,6 +370,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator appletvos appletvsimulator macosx";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -329,15 +388,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -361,6 +428,7 @@
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator appletvos appletvsimulator macosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
@@ -388,7 +456,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -409,39 +476,21 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ndizazzo.Biome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		C5EE7B2C1E6DE98200EC5A49 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5EE7B601E6DFD3500EC5A49 /* Carthage.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = BiomeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ndizazzo.BiomeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		C5EE7B2D1E6DE98200EC5A49 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5EE7B601E6DFD3500EC5A49 /* Carthage.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = BiomeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ndizazzo.BiomeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C59A9BF420D2B9E600C150E9 /* Build configuration list for PBXNativeTarget "BiomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C59A9BF520D2B9E600C150E9 /* Debug */,
+				C59A9BF620D2B9E600C150E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C5EE7B0E1E6DE98200EC5A49 /* Build configuration list for PBXProject "Biome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -456,15 +505,6 @@
 			buildConfigurations = (
 				C5EE7B291E6DE98200EC5A49 /* Debug */,
 				C5EE7B2A1E6DE98200EC5A49 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C5EE7B2B1E6DE98200EC5A49 /* Build configuration list for PBXNativeTarget "BiomeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C5EE7B2C1E6DE98200EC5A49 /* Debug */,
-				C5EE7B2D1E6DE98200EC5A49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

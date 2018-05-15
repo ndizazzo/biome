@@ -1,59 +1,53 @@
 import XCTest
 import Biome
 
-final class TestBiomeProvider: BiomeProvider {
-    var biomeName: String = "testBiome1"
-    
-    func mappedPropertyDictionary() -> [String : Any] {
-        return ["testProviderValue": 1]
-    }
+struct TestBiome: Biome {
+    var identifier: String
+    var keyCount: Int { return 4 }
+
+    var testItem1: String
+    var testItem2: Int
+    var testItem3: Double
+    var testItem4: Bool
+}
+
+struct SecondTestBiome: Biome {
+    var identifier: String { return "SecondTestBiome" }
+    var keyCount: Int { return 0 }
 }
 
 class BiomeTests: XCTestCase {
-    var testBiome: Biome!
-    
+    let jsonBiomeDecoder = JSONDecoder()
+    let plistBiomeDecoder = PropertyListDecoder()
+
     override func setUp() {
         super.setUp()
-        
-        self.testBiome = Biome(named: "test")
-        self.testBiome.set("testKey", value: "testValue")
     }
-    
+
     override func tearDown() {
         super.tearDown()
     }
-    
-    func testBiomeName() {
-        XCTAssert(testBiome.name == "test")
+
+    func testCanLoadFromJSON() {
+        let biomeURL = Bundle(for: BiomeTests.self).url(forResource: "testProperties", withExtension: "json")
+        let biome = try! TestBiome.load(fromPath: biomeURL, using: jsonBiomeDecoder)
+
+        XCTAssertNotNil(biome)
+        XCTAssertEqual(biome.testItem1, "item1")
+        XCTAssertEqual(biome.testItem2, 0)
+        XCTAssertEqual(biome.testItem3, 1.0)
+        XCTAssertFalse(biome.testItem4)
     }
-    
-    func testBiomeCount() {
-        XCTAssertEqual(self.testBiome.count, 1)
+
+    func testCanLoadFromPlist() {
+        let biomeURL = Bundle(for: BiomeTests.self).url(forResource: "testProperties", withExtension: "plist")
+        let biome = try! TestBiome.load(fromPath: biomeURL, using: plistBiomeDecoder)
+
+        XCTAssertNotNil(biome)
+        XCTAssertEqual(biome.identifier, "TestPlistBiome")
+        XCTAssertEqual(biome.testItem1, "item1")
+        XCTAssertEqual(biome.testItem2, 0)
+        XCTAssertEqual(biome.testItem3, 1.0)
+        XCTAssertFalse(biome.testItem4)
     }
-    
-    func testGettingBiomeValue() {
-        try! BiomeManager.register(testBiome)
-        let testValue = testBiome.get("testKey") as! String
-        XCTAssertEqual(testValue, "testValue")
-    }
-    
-    func testBiomeEquality() {
-        let first = Biome(named: "first")
-        let second = Biome(named: "second")
-        let duplicate = Biome(named: "first")
-        
-        XCTAssertEqual(first, duplicate)
-        XCTAssertEqual(first, first)
-        XCTAssertNotEqual(first, second)
-    }
-    
-    func testBiomeWithProvider() {
-        let biome = Biome(with: TestBiomeProvider())
-        XCTAssertEqual(biome.name, "testBiome1")
-        XCTAssertEqual(biome.count, 1)
-        
-        let value = biome.get("testProviderValue") as! Int
-        XCTAssertEqual(value, 1)
-    }
-    
 }

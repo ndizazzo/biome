@@ -9,27 +9,32 @@
 import UIKit
 import Biome
 
+struct APIBiome: Biome {
+    var identifier: String
+    var keyCount: Int { return 1 }
+
+    var baseURL: String
+}
+
 class ViewController: UIViewController {
     @IBOutlet weak var showBiomesButton: UIButton?
-    
     @IBOutlet weak var apiURLLabel: UILabel?
     
-    var dataSource: BiomeDataSource?
+    var dataSource: BiomeDataSource<APIBiome>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.showBiomesButton?.layer.cornerRadius = 3.0
 
-        let currentBiome = BiomeManager.shared.current
-
+        guard let currentBiome = manager.current(for: APIBiome.self) else { return }
         self.setupBiomeInfo(biome: currentBiome)
     }
     
     @IBAction func showBiomes(_ sender: Any) {
-        self.dataSource = BiomeDataSource(biomeManager: BiomeManager.shared)
+        self.dataSource = BiomeDataSource(biomeManager: manager)
         
-        BiomeManager.shared.delegate = self
+        manager.delegate = self
         
         let tableViewController = UITableViewController(style: .plain)
         tableViewController.tableView.delegate = self.dataSource
@@ -39,14 +44,14 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(tableViewController, animated: true)
     }
 
-    func setupBiomeInfo(biome: Biome?) {
-        self.apiURLLabel?.text = biome?.get("api_url") as? String
+    func setupBiomeInfo(biome: APIBiome) {
+        self.apiURLLabel?.text = biome.baseURL
     }
 }
 
 extension ViewController: BiomeManagerDelegate {
     func switched(to biome: Biome?) {
-        self.setupBiomeInfo(biome: biome)
+        guard let currentBiome = manager.current(for: APIBiome.self) else { return }
+        self.setupBiomeInfo(biome: currentBiome)
     }
 }
-

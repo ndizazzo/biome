@@ -1,0 +1,7 @@
+{
+    "identifier": "TestJSONBiome",
+    "testItem1": "item1",
+    "testItem2": 0,
+    "testItem3": 1.0,
+    "testItem4": false
+}

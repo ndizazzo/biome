@@ -2,13 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>test_item_1</key>
+	<key>identifier</key>
+	<string>TestPlistBiome</string>
+	<key>testItem1</key>
 	<string>item1</string>
-	<key>test_item_2</key>
+	<key>testItem2</key>
 	<integer>0</integer>
-	<key>test_item_3</key>
-	<date>2017-03-01T03:00:00Z</date>
-	<key>test_item_4</key>
+	<key>testItem3</key>
+	<real>1</real>
+	<key>testItem4</key>
 	<false/>
 </dict>
 </plist>
