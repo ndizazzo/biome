@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C5340FCE20C7A2860045BA5B /* Development.json in Resources */ = {isa = PBXBuildFile; fileRef = C5340FCD20C7A2860045BA5B /* Development.json */; };
 		C57075AF1E6F15DF00F4C96E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57075A31E6F15DF00F4C96E /* AppDelegate.swift */; };
 		C57075B01E6F15DF00F4C96E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C57075A51E6F15DF00F4C96E /* LaunchScreen.xib */; };
 		C57075B11E6F15DF00F4C96E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57075A71E6F15DF00F4C96E /* Main.storyboard */; };
-		C57075B21E6F15DF00F4C96E /* Development.plist in Resources */ = {isa = PBXBuildFile; fileRef = C57075A91E6F15DF00F4C96E /* Development.plist */; };
 		C57075B31E6F15DF00F4C96E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C57075AA1E6F15DF00F4C96E /* Images.xcassets */; };
 		C57075B51E6F15DF00F4C96E /* Production.plist in Resources */ = {isa = PBXBuildFile; fileRef = C57075AC1E6F15DF00F4C96E /* Production.plist */; };
 		C57075B61E6F15DF00F4C96E /* Staging.plist in Resources */ = {isa = PBXBuildFile; fileRef = C57075AD1E6F15DF00F4C96E /* Staging.plist */; };
@@ -58,11 +58,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C5340FCD20C7A2860045BA5B /* Development.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Development.json; sourceTree = "<group>"; };
 		C570758E1E6F15A500F4C96E /* BiomeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiomeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57075A31E6F15DF00F4C96E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C57075A61E6F15DF00F4C96E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		C57075A81E6F15DF00F4C96E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
-		C57075A91E6F15DF00F4C96E /* Development.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Development.plist; sourceTree = "<group>"; };
 		C57075AA1E6F15DF00F4C96E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C57075AB1E6F15DF00F4C96E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C57075AC1E6F15DF00F4C96E /* Production.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Production.plist; sourceTree = "<group>"; };
@@ -115,11 +115,11 @@
 			children = (
 				C57075A71E6F15DF00F4C96E /* Main.storyboard */,
 				C57075A51E6F15DF00F4C96E /* LaunchScreen.xib */,
-				C57075A91E6F15DF00F4C96E /* Development.plist */,
 				C57075AA1E6F15DF00F4C96E /* Images.xcassets */,
 				C57075AB1E6F15DF00F4C96E /* Info.plist */,
 				C57075AC1E6F15DF00F4C96E /* Production.plist */,
 				C57075AD1E6F15DF00F4C96E /* Staging.plist */,
+				C5340FCD20C7A2860045BA5B /* Development.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -175,6 +175,7 @@
 				TargetAttributes = {
 					C570758D1E6F15A500F4C96E = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = KAQ9WEF9C7;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -227,11 +228,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C57075B01E6F15DF00F4C96E /* LaunchScreen.xib in Resources */,
+				C5340FCE20C7A2860045BA5B /* Development.json in Resources */,
 				C57075B11E6F15DF00F4C96E /* Main.storyboard in Resources */,
 				C57075B31E6F15DF00F4C96E /* Images.xcassets in Resources */,
 				C57075B51E6F15DF00F4C96E /* Production.plist in Resources */,
 				C57075B61E6F15DF00F4C96E /* Staging.plist in Resources */,
-				C57075B21E6F15DF00F4C96E /* Development.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +326,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -367,6 +369,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -378,12 +381,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = KAQ9WEF9C7;
 				INFOPLIST_FILE = BiomeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ndizazzo.BiomeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -393,11 +395,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = KAQ9WEF9C7;
 				INFOPLIST_FILE = BiomeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ndizazzo.BiomeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

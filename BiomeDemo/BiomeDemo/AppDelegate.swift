@@ -9,29 +9,33 @@
 import UIKit
 import Biome
 
+let manager = BiomeManager()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
         self.createExampleBiomes()
-
         return true
     }
     
     func createExampleBiomes() {
-        let devBiome = Biome(with: PlistBiomeProvider(bundle: Bundle.main, filename: "Development"))
-        let stagingBiome = Biome(with: PlistBiomeProvider(bundle: Bundle.main, filename: "Staging"))
-        let prodBiome = Biome(with: PlistBiomeProvider(bundle: Bundle.main, filename: "Production"))
-        
+        let plistDecoder = PropertyListDecoder()
+        let jsonDecoder = JSONDecoder()
+
         do {
-            try BiomeManager.register(devBiome)
-            try BiomeManager.register(stagingBiome)
-            try BiomeManager.register(prodBiome)
-        } catch _ {
-            assert(false, "Couldn't create a Biome. Is a Plist file missing?")
+            let devPath = Bundle.main.url(forResource: "Development", withExtension: "json")!
+            let stagePath = Bundle.main.url(forResource: "Staging", withExtension: "plist")!
+            let prodPath = Bundle.main.url(forResource: "Production", withExtension: "plist")!
+
+            let devAPI = try APIBiome.load(fromPath: devPath, using: jsonDecoder)
+            let stagingAPI = try APIBiome.load(fromPath: stagePath, using: plistDecoder)
+            let prodAPI = try APIBiome.load(fromPath: prodPath, using: plistDecoder)
+
+            try manager.register(devAPI, stagingAPI, prodAPI)
+        } catch let error {
+            assert(false, "Couldn't create a Biome: \(error)")
         }
     }
 }
-

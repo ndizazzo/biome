@@ -32,29 +32,31 @@ Applied for our purposes:
 
 ## Concept
 
+A manager organizes similarly-typed Biomes into groups, where each group can have at most 1 "active" Biome. You can instruct the `BiomeManager` to switch to a different `Biome` within the same `BiomeGroup`, and the manager notifies the provided delegate.
+
 ### Biome
 
-The smallest conceptual unit - this object holds simple key / value pairs that define an environment.
+The smallest conceptual unit in the framework - this object defines a set of properties whose values will be swapped out at any time with a different set of values.
 
-### BiomeProvider
+### BiomeGroup
 
-A protocol that allows mappings from various types of data sets into Biome objects. Conformance to this protocol implies that Biomes will be able to be created from a given provider.
+A container that manages similarly-typed Biome objects. A Biome group provides funtionality to store Biomes, as well as maintain one "currently active" Biome in that group. You do not need to create or manage groups yourself - the `BiomeManager` takes care of that automatically.
 
 ### BiomeManager
 
-A centralized place to manage many Biomes.
+A common interface to register and track Biome objects.
 
 ## Support
-* Xcode 8.0 / Swift 3.0
+* Xcode 8.0 / Swift 4.0
 * iOS >= 8.0 (Use as an **Embedded** Framework)
 * tvOS >= 9.0
-* macOS >= 10.10 (untested, but should still work in theory)
+* macOS >= 10.10
 
 ## Having trouble running the demo?
 
 * `BiomeDemo/BiomeDemo.xcodeproj` is the demo project for iOS
 * Make sure you are running a supported version of Xcode.
-* Make sure that your project supports Swift 3.0
+* Make sure that your project supports Swift 4.0
 
 # Installation
 
@@ -85,8 +87,8 @@ and run `pod install`
 Biome includes Carthage prebuilt binaries.
 
 ```carthage
-github "ndizazzo/Biome" == 1.0.0
-github "ndizazzo/Biome" ~> 1.0.0
+github "ndizazzo/Biome" == 2.0.0
+github "ndizazzo/Biome" ~> 2.0.0
 ```
 
 In order to build the binaries for a new release, use `carthage build --no-skip-current && carthage archive Biome`.
@@ -96,56 +98,30 @@ In order to build the binaries for a new release, use `carthage build --no-skip-
 ## Implementing Biome in your Project
 To implement Biome, first `import Biome` into the relevant files where you want to use it. 
 
-Then, create a Biome by calling the `Biome()` constructor, or using the `PlistBiomeProvider(bundle: Bundle, filename: String)`. You can also write a `BiomeProvider` that will return a Biome object out of the provided data. Consider forking and 🔨 contributing back 🔨 to this project. Don't forget to update this README!
+Then, create a Biome by defining a `struct` that conforms to the `Biome` protocol. Add as many fields as you like to your object, and implement the `keyCount` property to return the number of properties on the object.
 
-Once you have a `Biome` object, use `BiomeManager.register()` to register it. This does a couple things:
-1. Adds it to the set of available Biomes. One uniquely named Biome is allowed per manager.
-1. Sets it as the `current` object on `BiomeManager`. This is a property tells you which tells you what Biome is currently active.
+Once you have `Biome` object, use `BiomeManager.register(...)` to register them. This does a couple things:
+1. Adds it to a managed group of similarly-typed Biomes. One uniquely identified Biome is allowed per group.
+1. Sets it as the `current` Biome of the `BiomeGroup` managing it. This `current` property tells you which Biome is currently active.
 
-Finally, extend one of your classes:
+Finally, extend one of your classes to receive events when the Biome is switched:
 
 ```swift
 extension MyClass: BiomeManagerDelegate {
-  func switched(to: Biome) {
+  func switched(to biome: Biome?) {
     print("The active biome has been switched to '\(to.name)'")
   }
 }
 ```
 
-Use that delegate method to do anything, like clear a CoreData database and reload data into it from a different environment, re-query an API for new data, refresh a view controller's appearance, etc.
-
-In order to take full advantage of Biome, you'll want to follow the pattern:
-```swift
-  
-  if let biome = BiomeManager.shared.current, let apiEndpoint = biome.get("api_url") as? String {
-    myAPIClient.get(apiEndpoint) { response in 
-      // ...
-    }
-  }
-```
-to gate your application's properties behind Biome so that when you switch environments, the most up-to-date values are always used.
-
-*NOTE* You are _not_ required to use the shared `BiomeManager`. You can create numerious instances of the class and store them where you wish.
-
-## Class Descriptions
-Implementation of Biome is straightforward. Biome provides several classes and protocols for you to use or customize:
-* `class BiomeManager` - A singleton manager object that maintains a list of active 'Biomes' created in your application.
-
-* `class Biome` - A simple wrapper object that dictates how to access values for keys. You are responsible for knowing the type of data going in, and coming out of a Biome.
-
-* `protocol BiomeProvider` - A protocol that defines how 'providers' should map keys and values to a Biome. Examples might include: plist files, JSON, XML, user defaults.
-
-* `class PlistBiomeProvider` - A biome provider that knows how to obtain values from a Plist file.
+Use that delegate method to do anything: clear a database and reload data into it from a different environment, re-query an API for new data, refresh a view controller's appearance, etc.
 
 # Feature Roadmap
 
-#### Biome Groups
-* You may want to have multiple Biomes active at a given time, or mix and match combinations of variables. Groups would allow the developer to do something like:
-  * Have a set of variables for API endpoints
-  * Have a set of style colours to use for UI elements
-  * Have a set of logging levels
+#### Display Biome Key names / values
+* [SR-7897](https://bugs.swift.org/browse/SR-7897) suggests that synthesized `Codable` conformance should also optionally generate `CaseIterable` conformance. This would allow every `Biome` to have the `keyCount` automatically generated, and `allItems` reflect the actual properties of the Biome. 
 
-  All without having to make `n!` distinct Biomes to switch between to achieve all possible permutations of variable configurations.
+If this improvement moves to the proposal phase, Biome.framework could add support for it, allowing developers to do more powerful things with the library; where they might be listed out for display in some type of UICollectionView / UITableView.
 
 #### Run-time Property Modification
 * Sometimes a developer might need to modify a property at run-time instead of providing it before compile-time. This feature would allow developers to do things like tweak animation timings, for instance.
@@ -180,9 +156,9 @@ If you have ideas or like what you see here and want to support the project, you
 
 If you are having questions or problems, you should:
 
- - Make sure you are using the latest version of the library. Check the [**release-section**](https://github.com/danielgindi/Biome/releases).
+ - Make sure you are using the latest version of the library. Check the [**release-section**](https://github.com/ndizazzo/Biome/releases).
  - Search or open questions on [**stackoverflow**](http://stackoverflow.com/questions/tagged/ios-biome) with the `ios-biome` tag
- - Search [**known issues**](https://github.com/danielgindi/Biome/issues) for your problem (open and closed)
+ - Search [**known issues**](https://github.com/ndizazzo/Biome/issues) for your problem (open and closed)
  - Create new issues (please **search known issues beforehand** and avoid creating duplicate issues)
 
 ## Documentation

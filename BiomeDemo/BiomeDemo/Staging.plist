@@ -2,7 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>api_url</key>
+	<key>baseURL</key>
 	<string>http://staging.api.com</string>
+	<key>identifier</key>
+	<string>staging-api-biome</string>
 </dict>
 </plist>

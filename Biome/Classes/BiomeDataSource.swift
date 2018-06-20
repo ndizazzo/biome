@@ -11,71 +11,73 @@ import Foundation
 #if os(iOS) || os(watchOS) || os(tvOS)
 // MARK: -
 // MARK: BiomeDataSource
-public class BiomeDataSource: NSObject {
+public class BiomeDataSource<T: Biome>: NSObject, UITableViewDataSource, UITableViewDelegate {
     internal weak var manager: BiomeManager?
-    internal var biomes: [Biome]
+    internal var biomeData: [BiomeData] = []
     
     public init(biomeManager: BiomeManager) {
         self.manager = biomeManager
-        self.biomes = Array(biomeManager.biomes)
+        if let group = biomeManager.group(for: HashableType<T>()) {
+            biomeData = group.biomeData
+        }
     }
     
-    fileprivate func biome(at index: Int) -> Biome? {
-        guard index >= 0 && index < self.biomes.count else {
+    fileprivate func data(at index: Int) -> BiomeData? {
+        guard index >= 0 && index < self.biomeData.count else {
             return nil
         }
         
-        return self.biomes[index]
+        return self.biomeData[index]
     }
     
-    fileprivate func viewModel(for biome: Biome) -> BiomeViewModel {
-        let isActive = self.manager?.current == biome
-        let string = biome.count == 1 ? "%d key" : "%d keys"
-        return BiomeViewModel(name: biome.name,
-                              subtitle: String.init(format: string, biome.count),
+    fileprivate func viewModel(for data: BiomeData) -> BiomeViewModel {
+        let currentBiome = self.manager?.current(for: T.self)
+        let isActive = currentBiome?.identifier == data.identifier
+
+        let string = 1 == data.keys ? "%d key" : "%d keys"
+        return BiomeViewModel(name: data.identifier,
+                              subtitle: String.init(format: string, data.keys),
                               active: isActive)
     }
-}
 
-// MARK: -
-// MARK: UITableViewDataSource
-extension BiomeDataSource: UITableViewDataSource {
-    
+    // MARK: -
+    // MARK: UITableViewDataSource
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.biomes.count
+        return self.biomeData.count
     }
-    
+
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.cell(tableView: tableView)
-        if let biome = self.biome(at: indexPath.row) {
+        if let biome = self.data(at: indexPath.row) {
             let viewModel = self.viewModel(for: biome)
             cell.update(with: viewModel)
         }
-        
+
         return cell
     }
-    
+
     private func cell(tableView: UITableView) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        
+
         if cell == nil {
             cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
         }
-        
+
         return cell!
     }
-}
 
-// MARK: -
-// MARK: UITableViewDelegate
-extension BiomeDataSource: UITableViewDelegate {
+    // MARK: -
+    // MARK: UITableViewDelegate
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let biome = self.biome(at: indexPath.row)
-        self.manager?.current = biome
-        
+        do {
+            try manager?.select(type: T.self, index: indexPath.row)
+        } catch let error {
+            print("ERROR: \(error)")
+        }
+
         var indexSet = IndexSet()
         indexSet.insert(0)
-        
+
         tableView.reloadSections(indexSet, with: .automatic)
     }
 }
