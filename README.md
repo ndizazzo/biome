@@ -40,7 +40,7 @@ The smallest conceptual unit in the framework - this object defines a set of pro
 
 ### BiomeGroup
 
-A container that manages similarly-typed Biome objects. A Biome group provides funtionality to store Biomes, as well as maintain one "currently active" Biome in that group. You do not need to create or manage groups yourself - the `BiomeManager` takes care of that automatically.
+A container that manages similarly-typed Biome objects. A Biome group provides functionality to store Biomes, as well as maintain one "currently active" Biome in that group. You do not need to create or manage groups yourself - the `BiomeManager` takes care of that automatically.
 
 ### BiomeManager
 
@@ -100,7 +100,7 @@ To implement Biome, first `import Biome` into the relevant files where you want 
 
 Then, create a Biome by defining a `struct` that conforms to the `Biome` protocol. Add as many fields as you like to your object, and implement the `keyCount` property to return the number of properties on the object.
 
-Once you have `Biome` object, use `BiomeManager.register(...)` to register them. This does a couple things:
+Once you have `Biome` objects, use `BiomeManager.register(...)` to register them. This does a couple things:
 1. Adds it to a managed group of similarly-typed Biomes. One uniquely identified Biome is allowed per group.
 1. Sets it as the `current` Biome of the `BiomeGroup` managing it. This `current` property tells you which Biome is currently active.
 
