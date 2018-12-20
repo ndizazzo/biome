@@ -27,9 +27,9 @@ public struct HashableType<Type>: Hashable {
     /// Swift 4.2 implementation of deprecated 'hashValue'
     ///
     /// - Parameter hasher: The hasher to use to combine values
-    //public func hash(into hasher: inout Hasher) {
-    //    hasher.combine("\(type)")
-    //}
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine("\(type)")
+    }
 }
 
 internal func createHashable<Type>(_ x: Type? = nil) -> HashableType<Type> {
