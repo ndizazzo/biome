@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C5340FCC20C7963C0045BA5B /* Biome.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EE7B2F1E6DEA4100EC5A49 /* Biome.swift */; };
-		C534207620C8DF180081B6E5 /* HashableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C534207520C8DF180081B6E5 /* HashableType.swift */; };
 		C534EB0F20D30FDE006414ED /* BiomeGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C534EB0E20D30FDE006414ED /* BiomeGroupTests.swift */; };
 		C534EB1120D42093006414ED /* HashableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C534EB1020D42093006414ED /* HashableTests.swift */; };
 		C570F7F720D2C43800890450 /* SelectableArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A9BE720D1C6FB00C150E9 /* SelectableArrayTests.swift */; };
@@ -16,6 +15,7 @@
 		C570F7F920D2C44D00890450 /* testProperties.json in Resources */ = {isa = PBXBuildFile; fileRef = C59A9BE920D2B50800C150E9 /* testProperties.json */; };
 		C570F7FB20D2CDC700890450 /* BiomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C570F7FA20D2CDC700890450 /* BiomeTests.swift */; };
 		C58861F920DAC6870074D71E /* BiomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EE7B301E6DEA4100EC5A49 /* BiomeDataSource.swift */; };
+		C58ABF012295DDFA000DAD41 /* HashableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58ABF002295DDFA000DAD41 /* HashableType.swift */; };
 		C59A9BE220D19B4900C150E9 /* BiomeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A9BE120D19B4900C150E9 /* BiomeGroup.swift */; };
 		C59A9BE420D19B7500C150E9 /* BiomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A9BE320D19B7500C150E9 /* BiomeManager.swift */; };
 		C59A9BE620D19C1F00C150E9 /* SelectableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A9BE520D19C1F00C150E9 /* SelectableArray.swift */; };
@@ -24,10 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C534207520C8DF180081B6E5 /* HashableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashableType.swift; sourceTree = "<group>"; };
 		C534EB0E20D30FDE006414ED /* BiomeGroupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiomeGroupTests.swift; sourceTree = "<group>"; };
 		C534EB1020D42093006414ED /* HashableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashableTests.swift; sourceTree = "<group>"; };
 		C570F7FA20D2CDC700890450 /* BiomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiomeTests.swift; sourceTree = "<group>"; };
+		C58ABF002295DDFA000DAD41 /* HashableType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HashableType.swift; path = Classes/HashableType.swift; sourceTree = "<group>"; };
 		C59A9BE120D19B4900C150E9 /* BiomeGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BiomeGroup.swift; path = Classes/BiomeGroup.swift; sourceTree = "<group>"; };
 		C59A9BE320D19B7500C150E9 /* BiomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BiomeManager.swift; path = Classes/BiomeManager.swift; sourceTree = "<group>"; };
 		C59A9BE520D19C1F00C150E9 /* SelectableArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectableArray.swift; path = Classes/SelectableArray.swift; sourceTree = "<group>"; };
@@ -110,11 +110,11 @@
 		C5EE7B2E1E6DE9DA00EC5A49 /* Biome */ = {
 			isa = PBXGroup;
 			children = (
+				C58ABF002295DDFA000DAD41 /* HashableType.swift */,
 				C5EE7B2F1E6DEA4100EC5A49 /* Biome.swift */,
 				C59A9BE120D19B4900C150E9 /* BiomeGroup.swift */,
 				C59A9BE320D19B7500C150E9 /* BiomeManager.swift */,
 				C5EE7B301E6DEA4100EC5A49 /* BiomeDataSource.swift */,
-				C534207520C8DF180081B6E5 /* HashableType.swift */,
 				C59A9BE520D19C1F00C150E9 /* SelectableArray.swift */,
 			);
 			name = Biome;
@@ -252,8 +252,8 @@
 				C59A9BE620D19C1F00C150E9 /* SelectableArray.swift in Sources */,
 				C59A9BE420D19B7500C150E9 /* BiomeManager.swift in Sources */,
 				C5340FCC20C7963C0045BA5B /* Biome.swift in Sources */,
-				C534207620C8DF180081B6E5 /* HashableType.swift in Sources */,
 				C58861F920DAC6870074D71E /* BiomeDataSource.swift in Sources */,
+				C58ABF012295DDFA000DAD41 /* HashableType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
