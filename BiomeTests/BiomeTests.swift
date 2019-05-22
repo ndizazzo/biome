@@ -20,14 +20,6 @@ class BiomeTests: XCTestCase {
     let jsonBiomeDecoder = JSONDecoder()
     let plistBiomeDecoder = PropertyListDecoder()
 
-    override func setUp() {
-        super.setUp()
-    }
-
-    override func tearDown() {
-        super.tearDown()
-    }
-
     func testCanLoadFromJSON() {
         let biomeURL = Bundle(for: BiomeTests.self).url(forResource: "testProperties", withExtension: "json")
         let biome = try! TestBiome.load(fromPath: biomeURL, using: jsonBiomeDecoder)

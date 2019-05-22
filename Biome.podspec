@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Biome'
-  s.version          = '2.0.0'
+  s.version          = '2.1.0'
   s.summary          = 'Simple environment management for iOS / macOS / tvOS / watchOS!'
   s.description      = <<-DESC
 Biome is a simple way to manage sets of variables between environments you might need to work with when developing your application.

@@ -2,14 +2,6 @@ import XCTest
 import Biome
 
 class SelectableArrayTests: XCTestCase {
-    override func setUp() {
-        super.setUp()
-    }
-
-    override func tearDown() {
-        super.tearDown()
-    }
-
     func testCanConstructWithNothing() {
         let testArray = SelectableArray<String>()
         XCTAssert(testArray.count == 0)
