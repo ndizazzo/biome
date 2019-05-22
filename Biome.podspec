@@ -13,6 +13,7 @@ One problem developers face, is the need to create multiple builds in order to t
   s.author           = { 'ndizazzo' => 'nick.dizazzo@gmail.com' }
   s.source           = { :git => 'https://github.com/ndizazzo/Biome.git', :tag => s.version.to_s }
 
+  s.swift_versions = '5.0'
   s.ios.deployment_target = '8.0'
   s.source_files = 'Biome/Classes/**/*'
 end
