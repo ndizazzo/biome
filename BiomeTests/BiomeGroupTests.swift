@@ -6,14 +6,6 @@ class BiomeGroupTests: XCTestCase {
     let plistBiomeDecoder = PropertyListDecoder()
     let testBiome = TestBiome(identifier: "TestBiome", testItem1: "", testItem2: 0, testItem3: 0.0, testItem4: false)
 
-    override func setUp() {
-        super.setUp()
-    }
-
-    override func tearDown() {
-        super.tearDown()
-    }
-
     func testCreatingGroup() {
         let group = BiomeGroup<TestBiome>()
         XCTAssertEqual(group.biomeCount, 0)

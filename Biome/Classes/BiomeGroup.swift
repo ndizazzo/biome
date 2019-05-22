@@ -61,7 +61,7 @@ internal final class BiomeGroup<BiomeType: Biome>: BiomeGroupProtocol {
     }
 
     func insert(_ biome: BiomeType) throws {
-        let alreadyExists = biomes.index(where: { innerBiome -> Bool in
+        let alreadyExists = biomes.firstIndex(where: { innerBiome -> Bool in
             return innerBiome.identifier == biome.identifier
         }) != nil
 
@@ -80,7 +80,7 @@ internal final class BiomeGroup<BiomeType: Biome>: BiomeGroupProtocol {
     }
 
     func removeBiome(with identifier: String) {
-        guard let removalIndex = biomes.index(where: { biome -> Bool in
+        guard let removalIndex = biomes.firstIndex(where: { biome -> Bool in
             return biome.identifier == identifier
         }) else { return }
 

@@ -2,14 +2,6 @@ import XCTest
 @testable import Biome
 
 class HashableTests: XCTestCase {
-    override func setUp() {
-        super.setUp()
-    }
-
-    override func tearDown() {
-        super.tearDown()
-    }
-
     func testTypeCanBeConvertedToHashable() {
         let myInt = 5
         let b = createHashable(myInt)
@@ -17,7 +9,6 @@ class HashableTests: XCTestCase {
         XCTAssertTrue(aaa)
     }
 
-    // Re-enable for Swift 4.2 / Xcode 10
     func testHashableTypeHasher() {
         let myInt = 5
         let hashable = createHashable(myInt)
